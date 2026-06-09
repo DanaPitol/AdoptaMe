@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pet_sexo_options">
+        <item>Hembra</item>
+        <item>Macho</item>
+    </string-array>
+
+    <string-array name="pet_estado_options">
+        <item>Disponible</item>
+        <item>En proceso</item>
+        <item>Adoptado</item>
+    </string-array>
+</resources>

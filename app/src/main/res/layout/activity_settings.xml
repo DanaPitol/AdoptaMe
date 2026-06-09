@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/adoptame_background"
+    tools:context=".SettingsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/adoptame_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIconTint="@color/adoptame_purple"
+        app:title="@string/settings_title"
+        app:titleTextColor="@color/adoptame_text_primary" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:id="@+id/txtTagline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/settings_tagline"
+                android:textColor="@color/adoptame_text_secondary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/cardSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_login_card_background"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTagline">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_card_title"
+                    android:textColor="@color/adoptame_text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/AuthLabel"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/label_email" />
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    style="@style/AuthInput"
+                    android:layout_marginTop="8dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/hint_email_login"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/adoptame_text_secondary" />
+
+                <TextView
+                    style="@style/AuthLabel"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_first_name" />
+
+                <EditText
+                    android:id="@+id/txtNombre"
+                    style="@style/AuthInput"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/hint_first_name"
+                    android:inputType="textPersonName|textCapWords" />
+
+                <TextView
+                    style="@style/AuthLabel"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_last_name_paternal" />
+
+                <EditText
+                    android:id="@+id/txtApellidoPaterno"
+                    style="@style/AuthInput"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/hint_last_name_paternal"
+                    android:inputType="textPersonName|textCapWords" />
+
+                <TextView
+                    style="@style/AuthLabel"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_last_name_maternal" />
+
+                <EditText
+                    android:id="@+id/txtApellidoMaterno"
+                    style="@style/AuthInput"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/hint_last_name_maternal"
+                    android:inputType="textPersonName|textCapWords" />
+
+                <TextView
+                    style="@style/AuthLabel"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_phone" />
+
+                <EditText
+                    android:id="@+id/txtTelefono"
+                    style="@style/AuthInput"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/hint_phone"
+                    android:inputType="phone"
+                    android:maxLength="20" />
+
+                <Button
+                    android:id="@+id/btnSave"
+                    style="@style/AuthPrimaryButton"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/btn_save_profile" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:text="@string/settings_card_footer"
+                    android:textColor="@color/adoptame_text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

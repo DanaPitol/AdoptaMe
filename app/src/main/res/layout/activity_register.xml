@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/adoptame_background"
+    android:fillViewport="true"
+    tools:context=".RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingTop="32dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="@string/app_brand"
+            android:src="@drawable/logo_adoptame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/app_brand"
+            android:textColor="@color/adoptame_orange"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+        <TextView
+            android:id="@+id/txtTagline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/register_tagline"
+            android:textColor="@color/adoptame_text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtBrand" />
+
+        <LinearLayout
+            android:id="@+id/cardRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/ic_login_card_background"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTagline">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_card_title"
+                android:textColor="@color/adoptame_text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/register_card_subtitle"
+                android:textColor="@color/adoptame_text_secondary"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/AuthLabel"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_email" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                style="@style/AuthInput"
+                android:layout_marginTop="8dp"
+                android:hint="@string/hint_email_register"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                style="@style/AuthLabel"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_password" />
+
+            <EditText
+                android:id="@+id/txtPassword"
+                style="@style/AuthInput"
+                android:layout_marginTop="8dp"
+                android:hint="@string/hint_password_register"
+                android:inputType="textPassword" />
+
+            <TextView
+                style="@style/AuthLabel"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_confirm_password" />
+
+            <EditText
+                android:id="@+id/txtConfirmPassword"
+                style="@style/AuthInput"
+                android:layout_marginTop="8dp"
+                android:hint="@string/hint_confirm_password"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/AuthPrimaryButton"
+                android:layout_marginTop="20dp"
+                android:text="@string/btn_register" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="@string/register_card_footer"
+                android:textColor="@color/adoptame_text_secondary"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

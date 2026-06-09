@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="adoptame_background">#FAF8FF</color>
+    <color name="adoptame_toolbar_background">#EDE6F5</color>
+    <color name="adoptame_orange">#F58220</color>
+    <color name="adoptame_purple">#9B7CB6</color>
+    <color name="adoptame_text_primary">#111827</color>
+    <color name="adoptame_text_secondary">#6B7280</color>
+    <color name="adoptame_text_hint">#9CA3AF</color>
+    <color name="adoptame_card_stroke">#F1E5DA</color>
+    <color name="adoptame_input_bg">#F8FAFC</color>
+    <color name="adoptame_input_border">#E5E7EB</color>
+    <color name="adoptame_status_teal">#2E9E8F</color>
+    <color name="adoptame_footer_pink">#D97A9A</color>
+    <color name="adoptame_list_background">#1A1A1A</color>
+    <color name="adoptame_button_purple">#B39DDB</color>
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/adoptame_background"
+    android:fillViewport="true"
+    tools:context=".RegisterPetActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/register_pet_title"
+            android:textColor="@color/adoptame_orange"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTagline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/register_pet_tagline"
+            android:textColor="@color/adoptame_text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+        <LinearLayout
+            android:id="@+id/cardForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ic_login_card_background"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTagline">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_pet_card_title"
+                android:textColor="@color/adoptame_text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/register_pet_card_subtitle"
+                android:textColor="@color/adoptame_text_secondary"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imgPetPhoto"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_pet_image"
+                android:contentDescription="@string/label_pet_photo"
+                android:padding="6dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_adoptame" />
+
+            <Button
+                android:id="@+id/btnTakePhoto"
+                style="@style/AuthPrimaryButton"
+                android:layout_marginTop="12dp"
+                android:text="@string/btn_take_photo" />
+
+            <TextView
+                android:id="@+id/txtPhotoHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/hint_tap_principal_photo"
+                android:textColor="@color/adoptame_text_secondary"
+                android:textSize="13sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingEnd="4dp"
+                tools:listitem="@layout/item_register_photo" />
+
+            <TextView style="@style/AuthLabel" android:layout_marginTop="20dp" android:text="@string/label_pet_name" />
+            <EditText
+                android:id="@+id/txtNombre"
+                style="@style/AuthInput"
+                android:layout_marginTop="8dp"
+                android:hint="@string/hint_pet_name"
+                android:inputType="textCapWords" />
+
+            <TextView style="@style/AuthLabel" android:layout_marginTop="16dp" android:text="@string/label_pet_type" />
+            <EditText
+                android:id="@+id/txtTipo"
+                style="@style/AuthInput"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/hint_pet_type"
+                android:inputType="textCapWords" />
+
+            <TextView style="@style/AuthLabel" android:layout_marginTop="16dp" android:text="@string/label_pet_breed" />
+            <EditText
+                android:id="@+id/txtRaza"
+                style="@style/AuthInput"
+                android:layout_marginTop="8dp"
+                android:hint="@string/hint_pet_breed"
+                android:inputType="textCapWords" />
+
+            <TextView style="@style/AuthLabel" android:layout_marginTop="16dp" android:text="@string/label_pet_sex" />
+            <Spinner
+                android:id="@+id/spinnerSexo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_input_background"
+                android:entries="@array/pet_sexo_options"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <TextView
+                style="@style/AuthLabel"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_pet_status" />
+
+            <Spinner
+                android:id="@+id/spinnerEstado"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_input_background"
+                android:entries="@array/pet_estado_options"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnSavePet"
+                style="@style/AuthPrimaryButton"
+                android:layout_marginTop="20dp"
+                android:text="@string/btn_save_pet" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="@string/register_pet_footer"
+                android:textColor="@color/adoptame_text_secondary"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

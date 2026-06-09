@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="88dp"
+    android:layout_height="88dp"
+    android:layout_marginEnd="8dp">
+
+    <ImageView
+        android:id="@+id/imgThumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_pet_image"
+        android:contentDescription="@string/gallery_image_content_desc"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_adoptame" />
+
+    <TextView
+        android:id="@+id/txtPrincipalBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/bg_status_badge"
+        android:paddingStart="6dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="2dp"
+        android:text="@string/label_principal_short"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+</FrameLayout>
